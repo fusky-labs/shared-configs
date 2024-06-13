@@ -2,7 +2,7 @@
   "name": "@fusky-labs/eslint-config-base",
   "version": "0.0.1",
   "repository": "https://github.com/fusky-labs/eslint-config.git",
-  "author": "Kerby Keith Aquino <skepfoosky15@gmail.com>",
+  "author": "Kerby Keith Aquino <hello@kurojifusky.com>",
   "license": "MIT",
   "scripts": {
     "prepare": "husky || true"
