@@ -1,13 +1,10 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  env: {
-    es2021: true,
-  },
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/recommended",
-    "plugin:import/typescript",
+    "plugin:import/typescript"
   ],
   plugins: ["@stylistic", "import", "tailwindcss", "unused-imports"],
   rules: {
@@ -23,6 +20,8 @@ module.exports = {
     "no-unnecessary-arbitrary-value": "warn",
 
     // Import rules
+    "import/no-unresolved": "off",
+
     "no-duplicate-imports": "warn",
     "import/no-unused-modules": ["error", { unusedExports: true }],
     "import/no-deprecated": "warn",
@@ -32,20 +31,19 @@ module.exports = {
     "unused-imports/no-unused-imports": "warn",
 
     // TypeScript rules
-    "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-namespace": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/member-delimiter-style": "warn",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/consistent-type-imports": [
       "error",
-      { prefer: "type-imports" },
+      { prefer: "type-imports" }
     ],
 
     // Code quality rules
     "@stylistic/newline-per-chained-call": [
       "error",
-      { ignoreChainWithDepth: 3 },
+      { ignoreChainWithDepth: 3 }
     ],
     "@stylistic/no-confusing-arrow": ["error", { onlyOneSimpleParam: true }],
     "@stylistic/no-floating-decimal": "error",
@@ -62,35 +60,35 @@ module.exports = {
       "error",
       {
         minProperties: 3,
-        consistent: true,
-      },
+        consistent: true
+      }
     ],
     "@stylistic/padding-line-between-statements": [
       "error",
       {
         blankLine: "always",
         prev: "directive",
-        next: "*",
+        next: "*"
       },
       {
         blankLine: "always",
         prev: ["multiline-const", "function"],
-        next: ["const", "let", "block-like", "export", "return", "try"],
+        next: ["const", "let", "block-like", "export", "return", "try"]
       },
       {
         blankLine: "always",
         prev: "block-like",
-        next: "*",
+        next: "*"
       },
       {
         blankLine: "always",
         prev: "*",
-        next: "try",
-      },
-    ],
+        next: "try"
+      }
+    ]
   },
   parser: ["@typescript-eslint/parser"],
   parserOptions: {
-    sourceType: "module",
-  },
+    sourceType: "module"
+  }
 }
