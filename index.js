@@ -4,7 +4,8 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/recommended",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "plugin:tailwindcss/recommended"
   ],
   plugins: ["@stylistic", "import", "tailwindcss", "unused-imports"],
   rules: {
@@ -15,9 +16,9 @@ module.exports = {
     "max-depth": ["error", 3],
 
     // TailwindCSS rules
-    "enforces-shorthand": "error",
-    "enforces-negative-arbitrary-values": "warn",
-    "no-unnecessary-arbitrary-value": "warn",
+    // "enforces-shorthand": "error",
+    // "enforces-negative-arbitrary-values": "warn",
+    // "no-unnecessary-arbitrary-value": "warn",
 
     // Import rules
     "import/no-unresolved": "off",
@@ -87,7 +88,7 @@ module.exports = {
       }
     ]
   },
-  parser: ["@typescript-eslint/parser"],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     sourceType: "module"
   }
