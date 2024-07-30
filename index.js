@@ -9,63 +9,59 @@ module.exports = {
   ],
   plugins: ["@stylistic", "import", "tailwindcss", "unused-imports"],
   rules: {
-    "no-var": "error",
-    "no-console": "warn",
-    "no-else-return": ["error", { allowElseIf: false }],
-    "no-use-before-define": "off",
-    "max-depth": ["error", 3],
+    "no-var": 2,
+    "no-console": 1,
+    "no-else-return": [2, { allowElseIf: false }],
+    "no-use-before-define": 0,
 
     // TailwindCSS rules
-    // "enforces-shorthand": "error",
-    // "enforces-negative-arbitrary-values": "warn",
-    // "no-unnecessary-arbitrary-value": "warn",
+    // "enforces-negative-arbitrary-values": 1,
+    // "no-unnecessary-arbitrary-value": 1,
 
     // Import rules
-    "import/no-unresolved": "off",
+    "import/no-unresolved": 0,
 
-    "no-duplicate-imports": "warn",
-    "import/no-unused-modules": ["error", { unusedExports: true }],
-    "import/no-deprecated": "warn",
-    "import/no-duplicates": "error",
-    "import/no-relative-packages": "error",
-    "import/newline-after-import": "warn",
-    "unused-imports/no-unused-imports": "warn",
+    "no-duplicate-imports": 1,
+    "import/no-unused-modules": [1, { unusedExports: true }],
+    "import/no-deprecated": 1,
+    "import/no-duplicates": 2,
+
+    // This rule may cause problems with a monorepo setup, turn this off if it does lol
+    "import/no-relative-packages": 1,
+
+    "import/newline-after-import": 1,
+    "unused-imports/no-unused-imports": 1,
 
     // TypeScript rules
-    "@typescript-eslint/no-namespace": "off",
-    "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/member-delimiter-style": "warn",
-    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-namespace": 0,
+    "@typescript-eslint/no-unused-vars": 1,
+    "@typescript-eslint/member-delimiter-style": 1,
+    "@typescript-eslint/no-non-null-assertion": 0,
     "@typescript-eslint/consistent-type-imports": [
-      "error",
+      2,
       { prefer: "type-imports" }
     ],
 
     // Code quality rules
-    "@stylistic/newline-per-chained-call": [
-      "error",
-      { ignoreChainWithDepth: 3 }
-    ],
-    "@stylistic/no-confusing-arrow": ["error", { onlyOneSimpleParam: true }],
-    "@stylistic/no-floating-decimal": "error",
-    "@stylistic/wrap-regex": "error",
-    "@stylistic/new-parens": ["error", "always"],
-    "@stylistic/arrow-spacing": "error",
-    "@stylistic/arrow-parens": ["error", "always"],
-    "@stylistic/array-element-newline": ["error", "consistent"],
-    "@stylistic/function-call-spacing": ["error", "never"],
-    "@stylistic/keyword-spacing": ["error", { before: true }],
-    "@stylistic/space-before-blocks": "error",
-    "@stylistic/object-curly-spacing": ["error", "always"],
+    "@stylistic/no-confusing-arrow": [2, { onlyOneSimpleParam: true }],
+    "@stylistic/no-floating-decimal": 2,
+    "@stylistic/new-parens": [2, "always"],
+    "@stylistic/arrow-spacing": 1,
+    "@stylistic/arrow-parens": [2, "always"],
+    "@stylistic/array-element-newline": [2, "consistent"],
+    "@stylistic/function-call-spacing": [2, "never"],
+    "@stylistic/keyword-spacing": [2, { before: true }],
+    "@stylistic/space-before-blocks": 2,
+    "@stylistic/object-curly-spacing": [2, "always"],
     "@stylistic/object-curly-newline": [
-      "error",
+      2,
       {
         minProperties: 3,
         consistent: true
       }
     ],
     "@stylistic/padding-line-between-statements": [
-      "error",
+      2,
       {
         blankLine: "always",
         prev: "directive",
