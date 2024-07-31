@@ -5,7 +5,6 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "plugin:tailwindcss/recommended"
   ],
   plugins: ["@stylistic", "import", "tailwindcss", "unused-imports"],
   rules: {
@@ -14,17 +13,14 @@ module.exports = {
     "no-else-return": [2, { allowElseIf: false }],
     "no-use-before-define": 0,
 
-    // TailwindCSS rules
-    // "enforces-negative-arbitrary-values": 1,
-    // "no-unnecessary-arbitrary-value": 1,
-
     // Import rules
-    "import/no-unresolved": 0,
-
     "no-duplicate-imports": 1,
+    
+    "import/no-unresolved": 0,
     "import/no-unused-modules": [1, { unusedExports: true }],
     "import/no-deprecated": 1,
     "import/no-duplicates": 2,
+    "import/no-useless-path-segments": 1,
 
     // This rule may cause problems with a monorepo setup, turn this off if it does lol
     "import/no-relative-packages": 1,
@@ -35,7 +31,7 @@ module.exports = {
     // TypeScript rules
     "@typescript-eslint/no-namespace": 0,
     "@typescript-eslint/no-unused-vars": 1,
-    "@typescript-eslint/member-delimiter-style": 1,
+    "@typescript-eslint/member-delimiter-style": 0,
     "@typescript-eslint/no-non-null-assertion": 0,
     "@typescript-eslint/consistent-type-imports": [
       2,
@@ -56,7 +52,7 @@ module.exports = {
     "@stylistic/object-curly-newline": [
       2,
       {
-        minProperties: 3,
+        minProperties: 8,
         consistent: true
       }
     ],
